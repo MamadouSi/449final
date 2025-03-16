@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/image/Screenshot\ 2025-02-27\ at\ 15.12.40.png);
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-size: 4em;
+    text-align: left;
+    color: white;
+    text-transform: capitalize;
+}
+h2{
+    font-size: 1.5em;
+    text-align: left;
+    color: white;
+}
+img{
+    width: 600px;
+    height: 400px;
+    align-items: center;
+    justify-items: center;
+}
+
+#btn{
+font-size: 3.5em;
+align-items: end;
+justify-items: end;
+background-color: none;
+color: white;
+margin-top: 260px;
+}
+
+#btn:hover{
+color: red;
+}
+
+#myText{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: left;
+    color: grey;
+    background-color: white;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+#myText2{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: left;
+    color: grey;
+    background-color: white;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.profil{
+    justify-content: center;
+    align-items: center;
+}
