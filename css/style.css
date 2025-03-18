@@ -15,19 +15,50 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Centre le reste du contenu */
+    align-items: center;
+    /* Centre le reste du contenu */
     justify-content: center;
-    text-align: center;  /* Centre par défaut */
+    text-align: center;
+    /* Centre par défaut */
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: relative;
+    margin-bottom: 100px;
 }
 
-h1, h2 {
-    text-align: left;  /* Aligner h1 et h2 à gauche */
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.part1 {
+    width: 45%;
+    padding: 20px;
+    /* margin-top: -90px; */
+}
+
+.part2 {
+    width: 45%;
+    padding: 20px;
+    margin-bottom: -140px;
+}
+
+
+h1,
+h2,
+h3,
+p {
+    text-align: left;
+    /* Aligner h1 et h2 à gauche */
     padding-left: 100px;
-    width: 100%;  /* S'assurer que les titres occupent toute la largeur */
-    margin-left: 20px;  /* Ajouter un peu de marge pour qu'ils ne collent pas au bord */
+    width: 100%;
+    /* S'assurer que les titres occupent toute la largeur */
+    margin-left: 20px;
+    /* Ajouter un peu de marge pour qu'ils ne collent pas au bord */
+
 }
 
 
@@ -35,18 +66,37 @@ h1 {
     font-size: 3em;
     color: white;
     text-transform: capitalize;
-    margin-bottom: 10px;
-    font-family: 'IM Fell English', serif;  /* Utiliser IM FELL ENGLISH pour h1 */
-
+    font-family: 'IM Fell English', serif;
+    /* Utiliser IM FELL ENGLISH pour h1 */
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: white;
     margin-bottom: 20px;
-    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;  /* Utiliser GURMUKHI MN pour h2 */
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    /* Utiliser GURMUKHI MN pour h2 */
     word-wrap: break-word;
 
+}
+
+h3 {
+    font-size: 1.5em;
+    font-family: 'IM Fell English', serif;
+    color: red;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1em;
+    margin-left: 20px;
+    color: white;
+    margin-bottom: 80px;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    word-wrap: break-word;
+    text-align: left;
 }
 
 .profil {
@@ -65,16 +115,58 @@ img {
     object-fit: cover;
 }
 
-input {
-    font-size: 1.2em;
-    text-transform: uppercase;
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 220px;
+    height: 230px;
+    border-radius: 40%;
+    object-fit: cover;
+}
+.image-container img:hover {
+    border-radius: 40%;
+    border: 3px solid red;
+    transition: border 0.9s ease;
+    transform: scale(0.8);
+    transition: transform 0.9s ease;
+    opacity: 50%;
+}
+.hover-text {
+    position: absolute;
+    bottom: 10px;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    width: 80%;
     text-align: center;
+}
+.image-container:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+input {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: left;
     color: grey;
     background-color: white;
     border-radius: 40px;
     border: none;
     padding: 10px 15px;
-    width: 80%;
+    width: 60%;
     max-width: 400px;
 }
 
@@ -84,21 +176,117 @@ footer {
 
 #btn {
     font-size: 2em;
+    font-family: 'IM Fell English', serif;
     background-color: transparent;
-    border: 2px solid white;
     color: white;
     padding: 10px 20px;
     border-radius: 40px;
+    border: none;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 #btn:hover {
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    color: red;
+    font-size: 2.5em;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    transition: color 0.6s ease;
 }
+
 .button-container {
     position: absolute;
-    bottom: 50px; /* Ajuste la distance par rapport au bas de la page */
-    right: 20px;  /* Ajuste la distance par rapport au bord droit */
+    bottom: -70px;
+    right: 20px;
+    /* Ajuste la distance par rapport au bord droit */
+}
+
+.button-container2 {
+    position: absolute;
+    bottom: -100px;
+    /* Ajuste la distance par rapport au bas de la page */
+    right: 20px;
+    /* Ajuste la distance par rapport au bord droit */
+}
+
+
+
+.game-container {
+    padding: 20px;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.question {
+    font-size: 1em;
+    margin: 20px 0;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 12px;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.choice1 {
+    background-color: grey;
+}
+
+.choice2 {
+    background-color: grey;
+}
+
+button:hover {
+    opacity: 0.8;
+    color: white;
+    background-color: red;
+}
+
+.fact {
+    margin-top: 20px;
+    color: white;
+    padding: 20px;
+    background: red;
+    border: red solid 100%;
+    opacity: 50%;
+    border-radius: 5px;
+    width: 50%;
+    display: none;
+}
+
+.selected {
+    color: white;
+    background: red;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: red;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+
 }

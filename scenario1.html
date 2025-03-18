@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div class="game-container">
+          <!-- Progress Bar -->
+          <div class="progress-container">
+            <div id="progressBar" class="progress-bar">0/5</div>
+        </div>
+
+        <h1>Ethical Raw Material Choices</h1>
+        <p id="scenarioText" class="question"></p>
+        
+        <div class="choices">
+            <button id="choice1" class="choice1" onclick="makeChoice(0)"></button>
+            <button id="choice2" class="choice2" onclick="makeChoice(1)"></button>
+        </div>
+        
+        <p id="fact" class="fact"></p>
+        <div class="button-container">
+        <button  id="btn"onclick="nextScenario()">NEXT</button>
+    </div>
+    </div>
+   
+    <script src="java/js.js"></script>
+</body>
+
+</html>
