@@ -212,6 +212,9 @@ footer {
 
 
 .game-container {
+    background-image: url('../image/scenabasic.png');
+    background-size: cover;
+    background-position: center;
     padding: 20px;
     font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
