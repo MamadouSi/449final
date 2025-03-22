@@ -5,49 +5,17 @@
 }
 
 body {
-    background-image: url('../image/backgroundbody.png');
+    background-image: url('../image/scenabasic.png');
     background-size: cover;
-    background-position: center;
+    background-position: center -200px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
-
-
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Centre le reste du contenu */
-    justify-content: center;
-    text-align: center;
-    /* Centre par défaut */
-    width: 100%;
-    height: 89vh;
-    position: relative;
-    margin-bottom: 100px;
-}
 
-.container1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-}
 
-.part1 {
-    width: 45%;
-    padding: 20px;
-    /* margin-top: -90px; */
-}
 
-.part2 {
-    width: 45%;
-    padding: 20px;
-    margin-bottom: -140px;
-}
+
+
 
 
 h1,
@@ -55,12 +23,9 @@ h2,
 h3,
 p {
     text-align: left;
-    /* Aligner h1 et h2 à gauche */
     padding-left: 100px;
     width: 100%;
-    /* S'assurer que les titres occupent toute la largeur */
     margin-left: 20px;
-    /* Ajouter un peu de marge pour qu'ils ne collent pas au bord */
 
 }
 
@@ -94,7 +59,7 @@ h3 {
 
 p {
     font-size: 1em;
-    margin-left: 20px;
+    margin-left: 30px;
     color: white;
     margin-bottom: 80px;
     font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
@@ -102,80 +67,9 @@ p {
     text-align: left;
 }
 
-.profil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-}
-
-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-}
 
 
-.image-container {
-    position: relative;
-    display: inline-block;
-}
 
-.image-container img {
-    width: 220px;
-    height: 230px;
-    border-radius: 40%;
-    object-fit: cover;
-}
-.image-container img:hover {
-    border-radius: 40%;
-    border: 3px solid red;
-    transition: border 0.9s ease;
-    transform: scale(0.8);
-    transition: transform 0.9s ease;
-    opacity: 50%;
-}
-.hover-text {
-    position: absolute;
-    bottom: 10px;
-    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
-    left: 50%;
-    transform: translateX(-50%);
-    background: red;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    width: 80%;
-    text-align: center;
-}
-.image-container:hover .hover-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-input {
-    font-size: 1em;
-    text-transform: uppercase;
-    text-align: left;
-    color: grey;
-    background-color: white;
-    border-radius: 40px;
-    border: none;
-    padding: 10px 15px;
-    width: 60%;
-    max-width: 400px;
-}
-
-footer {
-    margin-top: 30px;
-}
 
 #btn {
     font-size: 2em;
@@ -214,7 +108,6 @@ footer {
 
 
 .game-container {
-    background-image: url('../image/scenabasic.png');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -232,12 +125,15 @@ footer {
 
 .choices {
     display: flex;
+    margin-top: 103px;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 118px;
 }
 
 button {
+    width: 303px;          /* Largeur fixe */
+    height: 65px;          /* Hauteur fixe */
     padding: 12px;
     font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
     border: none;
@@ -246,12 +142,13 @@ button {
     font-size: 1em;
 }
 
+
 .choice1 {
-    background-color: grey;
+    background-color: #AEAEAE;
 }
 
 .choice2 {
-    background-color: grey;
+    background-color: #AEAEAE;
 }
 
 button:hover {
@@ -282,8 +179,10 @@ button:hover {
     background-color: #ddd;
     border-radius: 10px;
     margin-top: 20px;
+    margin-bottom: 150px;
     height: 20px;
     overflow: hidden;
+    align-items: center;
 }
 
 .progress-bar {
@@ -292,6 +191,7 @@ button:hover {
     background-color: red;
     text-align: center;
     line-height: 20px;
-    color: white;
+    color: black;
+
 
 }
