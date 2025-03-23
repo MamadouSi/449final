@@ -1,3 +1,4 @@
+
 let currentScenario = 0;
 let scenarios = [
     {
@@ -50,34 +51,52 @@ function loadScenario() {
         document.querySelector("button[onclick='nextScenario()']").style.display = "none";
     }
 }
-
 function makeChoice(choiceIndex) {
     let factElement = document.getElementById("fact");
     let scenario = scenarios[currentScenario];
 
+    // Affiche le container et le texte
+    document.getElementById("fact-contain").style.display = "flex";
     factElement.textContent = scenario.choices[choiceIndex].fact;
-    factElement.style.display = "block";
+    factElement.style.display = "block";  // ✅ Utilise block pour la largeur 100%
 
+    // Reset des classes sélectionnées
     document.getElementById("choice1").classList.remove("selected");
     document.getElementById("choice2").classList.remove("selected");
 
+    // Applique la sélection
     document.getElementById("choice" + (choiceIndex + 1)).classList.add("selected");
-    //  Changement de background selon le choix
+
+    // Change le background selon le choix
     if (choiceIndex === 0) {
         document.body.style.backgroundImage = "url('image/scenachoice1.png')";
-    } else if (choiceIndex === 1) {
+    } else {
         document.body.style.backgroundImage = "url('image/scenachoice2.png')";
     }
 }
+
 
 function nextScenario() {
     if (currentScenario < scenarios.length) {
         currentScenario++;
         updateProgressBar();
         loadScenario();
+
+        // ✅ Remet le background de base
         document.body.style.backgroundImage = "url('image/scenabasic.png')";
+
+        // ✅ Désélectionne tous les boutons
+        document.getElementById("choice1").classList.remove("selected");
+        document.getElementById("choice2").classList.remove("selected");
+
+        // ✅ Cache le fact si tu veux
+        let factElement = document.getElementById("fact");
+        if (factElement) factElement.style.display = "none";
+        document.getElementById("fact-contain").style.display = "none";
+
     }
 }
+
 
 function updateProgressBar() {
     let progressBar = document.getElementById("progressBar");
@@ -86,5 +105,5 @@ function updateProgressBar() {
     progressBar.textContent = `${currentScenario}/${scenarios.length}`;
 }
 
-// Load the first scenario on page load
+// Load the first scenario on page load  
 loadScenario();

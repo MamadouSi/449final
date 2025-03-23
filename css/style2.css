@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,7 +21,7 @@ body {
 
 h1,
 h2,
-h3,
+
 p {
     text-align: left;
     padding-left: 100px;
@@ -155,17 +156,38 @@ button:hover {
     background-color: red;
 }
 
+#fact-contain {
+    width: 600px;
+    height: 250px;
+   margin-left: 150px;
+    margin-top: 60px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    display: none;
+    flex-direction: column;      /* ✅ Ajout pour bien empiler le H1 et le P */
+    align-items: center;         /* ✅ Centre horizontalement */
+    justify-content: center;     /* ✅ Centre verticalement */
+}
+
+.fact-title {
+    font-size: 2.5em;
+    color: white;
+    font-family: 'IM Fell English', serif;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
 .fact {
-    margin-top: 20px;
     color: white;
     padding: 20px;
-    background: red;
-    border: red solid 100%;
     opacity: 50%;
     border-radius: 5px;
-    width: 50%;
+    width: 100%;                /* ✅ Prend toute la largeur de #fact-contain */
     display: none;
+    text-align: center;         /* ✅ Centre le texte */
 }
+
 
 .selected {
     color: white;
