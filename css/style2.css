@@ -150,13 +150,17 @@ button {
     background-color: #AEAEAE;
 }
 
-button:hover {
+/* Applique l'effet hover uniquement aux boutons choice1 et choice2 */
+.choice1:hover,
+.choice2:hover {
     opacity: 0.8;
     color: white;
     background-color: red;
 }
 
+
 #fact-contain {
+    position: relative;
     width: 600px;
     height: 250px;
    margin-left: 150px;
@@ -215,3 +219,24 @@ button:hover {
 
 
 }
+
+
+
+.close-btn {
+    position: absolute;
+    margin-bottom: 200px;
+    margin-left: 540px;
+    background: transparent;
+    color: white;
+    font-size: 1.5em; /* Réduit la taille du bouton */
+    border: none;
+    cursor: pointer;
+}
+
+/* Pas d'effet hover */
+.close-btn:hover {
+    color: black;
+}
+
+
+
