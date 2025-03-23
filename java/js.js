@@ -62,6 +62,12 @@ function makeChoice(choiceIndex) {
     document.getElementById("choice2").classList.remove("selected");
 
     document.getElementById("choice" + (choiceIndex + 1)).classList.add("selected");
+    //  Changement de background selon le choix
+    if (choiceIndex === 0) {
+        document.body.style.backgroundImage = "url('image/scenachoice1.png')";
+    } else if (choiceIndex === 1) {
+        document.body.style.backgroundImage = "url('image/scenachoice2.png')";
+    }
 }
 
 function nextScenario() {
@@ -69,6 +75,7 @@ function nextScenario() {
         currentScenario++;
         updateProgressBar();
         loadScenario();
+        document.body.style.backgroundImage = "url('image/scenabasic.png')";
     }
 }
 
