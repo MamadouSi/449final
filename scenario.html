@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Game</title>
     <link rel="stylesheet" href="css/style2.css">
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
 <div class="game-container">
     <!-- Progress Bar -->
     <div class="progress-container">
         <div id="progressBar" class="progress-bar">0/5</div>
     </div>
+
+    <div id="stats">
+        <div id="money">💰 Money: $3000</div>
+        <div id="mentalHealthBar">
+            <div id="mentalHealthFill"></div>
+        </div>
+    </div>
+    <div id="game">
     <h1>Ethical Raw Material Choices</h1>
     <p id="scenarioText" class="question"></p>
     <div class="choices">
         <button id="choice1" class="choice1" onclick="makeChoice(0)"></button>
         <button id="choice2" class="choice2" onclick="makeChoice(1)"></button>
     </div>
-
-
+    </div>
     <div id="fact-contain">
         <button class="close-btn" onclick="nextScenario()">X</button>
         <h3 class="fact-title">FACT</h3>
         <p id="fact" class="fact"></p>
     </div>
 
+    <div id="results-container" style="display:none;">
+        <h2>Game Over!</h2>
+        <canvas id="resultsChart"></canvas>
+        <button onclick="restartGame()">Play Again</button>
 
+        <p>Want to make a difference? Learn more about ethical tech practices and support fair companies!</p>
+    </div>
+</div>
 
-
-       </div>   <script src="java/js.js"></script>
+<script src="java/js.js"></script>
 </body>
-
 </html>
