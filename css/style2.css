@@ -1,0 +1,323 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../image/backgroundbody.png');
+    background-size: cover;
+    background-position: center -200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+
+
+
+h1,
+h2,
+
+p {
+    text-align: left;
+    padding-left: 100px;
+    width: 100%;
+    margin-left: 20px;
+
+}
+
+
+h1 {
+    font-size: 3em;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'IM Fell English', serif;
+    /* Utiliser IM FELL ENGLISH pour h1 */
+}
+
+h2 {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    /* Utiliser GURMUKHI MN pour h2 */
+    word-wrap: break-word;
+
+}
+
+h3 {
+    font-size: 1.5em;
+    font-family: 'IM Fell English', serif;
+    color: red;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1em;
+    margin-left: 30px;
+    color: white;
+    margin-bottom: 80px;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+
+
+
+
+#btn {
+    font-size: 2em;
+    font-family: 'IM Fell English', serif;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: transparent;
+    color: red;
+    font-size: 2.5em;
+    transition: color 0.6s ease;
+}
+
+.button-container {
+    position: absolute;
+    bottom: -0px;
+    right: 20px;
+    /* Ajuste la distance par rapport au bord droit */
+}
+
+.button-container2 {
+    position: absolute;
+    bottom: -0px;
+    right: 20px;
+
+}
+
+
+
+.game-container {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.question {
+    font-size: 1em;
+    margin: 20px 0;
+}
+
+.choices {
+    display: flex;
+    margin-top: 103px;
+    flex-direction: column;
+    align-items: center;
+    gap: 118px;
+}
+
+button {
+    width: 303px;          /* Largeur fixe */
+    height: 65px;          /* Hauteur fixe */
+    padding: 12px;
+    font-family: 'Gurmukhi MN', Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+
+.choice1 {
+    background-color: #AEAEAE;
+}
+
+.choice2 {
+    background-color: #AEAEAE;
+}
+
+/* Applique l'effet hover uniquement aux boutons choice1 et choice2 */
+.choice1:hover,
+.choice2:hover {
+    opacity: 0.8;
+    color: white;
+    background-color: red;
+}
+
+
+#fact-contain {
+    position: relative;
+    width: 600px;
+    height: 250px;
+   margin-left: 150px;
+    margin-top: 60px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    display: none;
+    flex-direction: column;      /* ✅ Ajout pour bien empiler le H1 et le P */
+    align-items: center;         /* ✅ Centre horizontalement */
+    justify-content: center;     /* ✅ Centre verticalement */
+}
+
+.fact-title {
+    font-size: 2.5em;
+    color: white;
+    font-family: 'IM Fell English', serif;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.fact {
+    color: white;
+    padding: 20px;
+    opacity: 50%;
+    border-radius: 5px;
+    width: 100%;                /* ✅ Prend toute la largeur de #fact-contain */
+    display: none;
+    text-align: center;         /* ✅ Centre le texte */
+}
+
+
+.selected {
+    color: white;
+    background: red;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 20px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: red;
+    text-align: center;
+    line-height: 20px;
+    color: black;
+
+
+}
+
+
+
+.close-btn {
+    position: absolute;
+    margin-bottom: 200px;
+    margin-left: 540px;
+    background: transparent;
+    color: white;
+    font-size: 1.5em; /* Réduit la taille du bouton */
+    border: none;
+    cursor: pointer;
+}
+
+
+.close-btn:hover {
+    color: black;
+}
+
+#stats-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#money {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+    text-align: right;
+}
+
+#mentalHealthBar {
+    width: 120px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+#mentalHealthFill {
+    height: 100%;
+    width: 100%;
+    background-color: green;
+}
+
+#progressBarContainer {
+    width: 100%;
+    background-color: gray;
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 1000;
+    width: 300px;
+}
+
+#popup p {
+    color: white;
+}
+
+
+#results-container {
+    display: none;
+}
+
+#results-container {
+    display: flex;
+    flex-direction: column; /* Organise en colonne */
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement si nécessaire */
+    text-align: center; /* Centre le texte */
+    gap: 15px; /* Espacement entre les éléments */
+}
+
+#resultsChart {
+    max-height: 720px;
+}
+
+
