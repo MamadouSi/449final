@@ -41,6 +41,17 @@ let scenarios = [
     }
 ];
 
+
+let breakingNews = [
+    { message: "Stock market crash! All businesses suffer losses.", cost: -500 },
+    { message: "New tax incentives for ethical businesses! Gain extra funds.", cost: 300 },
+    { message: "Data privacy law tightened! Fines for non-compliance.", cost: -400 },
+    { message: "Viral scandal! Your company is under public scrutiny.", mentalImpact: -20 },
+    { message: "Eco-friendly trend! Customers support sustainable brands.", mentalImpact: 15 }
+];
+
+
+
 function loadScenario() {
     if (currentScenario < scenarios.length) {
         let scenario = scenarios[currentScenario];
@@ -63,7 +74,8 @@ function makeChoice(choiceIndex) {
     document.getElementById("fact-contain").style.display = "flex";
     document.getElementById("fact").textContent = choice.fact;
     document.getElementById("fact").style.display = "block";
-
+    // Trigger Breaking News after a choice
+    triggerBreakingNews();
     updateUI();
 }
 
@@ -110,18 +122,32 @@ function updateProgressBar() {
     progressBar.textContent = `${currentScenario}/${scenarios.length}`;
 }
 function restartGame() {
-    currentScenario = 0;
-    budget = 3000;
-    mentalHealth = 100;
-    workerDeaths = 0;
-
-    document.getElementById("results-container").style.display = "none";
-    document.getElementById("game").style.display = "block";
-    document.getElementById("fact-contain").style.display = "none";
-
-    updateProgressBar();
-    updateUI();
-    loadScenario();
+    window.location.href = "index.html";
 }
+
+
+function triggerBreakingNews() {
+    if (Math.random() < 0.3) { // 30% chance of triggering breaking news
+        let news = breakingNews[Math.floor(Math.random() * breakingNews.length)];
+        budget += news.cost || 0;
+        mentalHealth = Math.max(0, Math.min(100, mentalHealth + (news.mentalImpact || 0)));
+
+        let newsBanner = document.createElement("div");
+        newsBanner.className = "breaking-news-banner";
+        newsBanner.innerHTML = `📰 Breaking News: ${news.message}`;
+        document.body.appendChild(newsBanner);
+
+        setTimeout(() => {
+            newsBanner.style.transform = "translateX(0)";
+            setTimeout(() => {
+                newsBanner.style.transform = "translateX(-100%)";
+                setTimeout(() => {
+                    newsBanner.remove();
+                }, 500);
+            }, 3000);
+        }, 100);
+    }
+}
+
 
 loadScenario();
